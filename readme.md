@@ -6,6 +6,7 @@ Set wallet address like empty
 
 # 👾 Ethereum Private Network Faucet
 
+All code is executed in a Mac OS Sonoma 14.0
 
 ## Overview
 
@@ -29,7 +30,9 @@ Before you begin, ensure you have the following prerequisites installed:
 ## Steps
 
 Run Docker Desktop
+
 Open your Metamask
+
 **set the wallet direction in genesis.json and save**
 
 
@@ -61,7 +64,7 @@ ethereum/client-go:v1.11.0 init --datadir data /genesis.json
 ```
 // Set your miner account (Could be the new account created before or one of your metamask to see the first results)
 
-docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 --mine --miner.etherbase 0x1157466D2Df9D52672e8a62E5e346e8d38B68b84 --http.corsdomain="*" --miner.threads 1
+docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 --mine --miner.etherbase 0xc34BB6086e4cad9B6fFc9f4Dfc62f4195692513c --http.corsdomain="*" --miner.threads 1
 ```
 This could take some minutes, refresh cache in metamask and you will see the balance of your miner account
 
