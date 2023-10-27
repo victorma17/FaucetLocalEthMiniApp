@@ -1,9 +1,3 @@
---
-Delete data folder
-Set wallet address like empty
---
-
-
 # 👾 Ethereum Private Network Faucet
 
 All code is executed in a Mac OS Sonoma 14.0
@@ -64,9 +58,11 @@ ethereum/client-go:v1.11.0 init --datadir data /genesis.json
 ```
 // Set your miner account (Could be the new account created before or one of your metamask to see the first results)
 
-docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 --mine --miner.etherbase 0xc34BB6086e4cad9B6fFc9f4Dfc62f4195692513c --http.corsdomain="*" --miner.threads 1
+docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 --mine --miner.etherbase <<Your 0x Wallet Account >> --http.corsdomain="*" --miner.threads 1
 ```
-This could take some minutes (if take more than 5 reset the container), refresh cache in metamask and you will see the balance of your miner account
+This could take some minutes, refresh cache in metamask and you will see the balance of your miner account, or try to make some fake transaction to force Metamask to fetch the balance.
+
+```
 
 ### Back
 
@@ -91,11 +87,11 @@ and drop the container and data folder and take the address of the new account c
 ```
 //new terminal 
 // direcion of the destiny of the funds from faucet account
-curl localhost:3455/faucet/0x60f42cEa9684686bF059b0cFC015D40d99b0Bc31
+curl localhost:3455/faucet/<<Your 0x Wallet Account >>
 
 //Remember to refresh the cache in metamask to see the balance of the new account, could take a minutes
 
-curl localhost:3455/balance/0x72d9179482aD8bb260e606fAE92173c157F2820e
+curl localhost:3455/balance/<<Your 0x Wallet Account >>
 ```
 
 ### Front
