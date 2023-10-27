@@ -66,7 +66,7 @@ ethereum/client-go:v1.11.0 init --datadir data /genesis.json
 
 docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 --mine --miner.etherbase 0xc34BB6086e4cad9B6fFc9f4Dfc62f4195692513c --http.corsdomain="*" --miner.threads 1
 ```
-This could take some minutes, refresh cache in metamask and you will see the balance of your miner account
+This could take some minutes (if take more than 5 reset the container), refresh cache in metamask and you will see the balance of your miner account
 
 ### Back
 
