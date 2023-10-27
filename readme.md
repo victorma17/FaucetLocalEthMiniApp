@@ -62,7 +62,7 @@ docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/c
 ```
 This could take some minutes, refresh cache in metamask and you will see the balance of your miner account, or try to make some fake transaction to force Metamask to fetch the balance.
 
-```
+
 
 ### Back
 
