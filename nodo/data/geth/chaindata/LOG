@@ -1,0 +1,30 @@
+=============== Oct 26, 2023 (UTC) ===============
+16:58:53.669662 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:58:53.682423 db@open opening
+16:58:53.687450 version@stat F·[] S·0B[] Sc·[]
+16:58:53.690744 db@janitor F·2 G·0
+16:58:53.692140 db@open done T·9.264232ms
+16:58:53.784550 db@close closing
+16:58:53.789604 db@close done T·5.028231ms
+=============== Oct 26, 2023 (UTC) ===============
+16:59:00.590011 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:59:00.593627 version@stat F·[] S·0B[] Sc·[]
+16:59:00.594115 db@open opening
+16:59:00.595145 journal@recovery F·1
+16:59:00.600968 journal@recovery recovering @1
+16:59:00.626910 memdb@flush created L0@2 N·12 S·855B "!8\x19..\x04UJ,v1":"r\x00\x00...b\xd3,v7"
+16:59:00.636607 version@stat F·[1] S·855B[855B] Sc·[0.25]
+16:59:00.645917 db@janitor F·3 G·0
+16:59:00.646356 db@open done T·51.892372ms
+17:50:16.615482 db@close closing
+17:50:17.610760 db@close done T·1.000561008s
+=============== Oct 27, 2023 (UTC) ===============
+06:49:40.202706 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+06:49:40.208787 version@stat F·[1] S·855B[855B] Sc·[0.25]
+06:49:40.209605 db@open opening
+06:49:40.211865 journal@recovery F·1
+06:49:40.248008 journal@recovery recovering @3
+06:49:40.353328 memdb@flush created L0@5 N·4635 S·244KiB "\b\x1a\xf0..\x98\xbfM,v4647":"\xfe\xc1\x1e..}\x9a\x9f,v4644"
+06:49:40.396976 version@stat F·[2] S·245KiB[245KiB] Sc·[0.50]
+06:49:40.414782 db@janitor F·4 G·0
+06:49:40.416774 db@open done T·206.374734ms
