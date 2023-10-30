@@ -1,4 +1,4 @@
-# 👾 Ethereum Private Network Faucet
+# 👾 Ethereum Private Network Faucet 👾
 
 All code is executed in a Mac OS Sonoma 14.0
 
@@ -27,7 +27,7 @@ Run Docker Desktop
 
 Open your Metamask
 
-**set the wallet direction in genesis.json and save**
+**Set the wallet direction in genesis.json and Save It**
 
 
 ### ethereum/client-go
