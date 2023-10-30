@@ -10,7 +10,7 @@ This repository contains instructions and code for setting up a faucet for a pri
 
 ### App Architecture
 
-The architecture of the app is given by codecrypto.academy, see the scheme below:
+The architecture of the app is given by codecrypto.academy,  see the scheme below:
 
 <figure><img src="arc.png" alt=""><figcaption><p>App Architecture, source: cedecrypto.academy</p></figcaption></figure>
 

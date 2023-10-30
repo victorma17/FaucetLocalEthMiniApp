@@ -1,3 +1,4 @@
 node_modules
 data
 nodo/genesis.json
+yarn.lock
