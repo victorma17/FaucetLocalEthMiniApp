@@ -27,7 +27,7 @@ Run Docker Desktop
 
 Open your Metamask
 
-**Set the wallet direction in genesis.json and Save It**
+**Set the wallet direction in nodo/genesis.json and Save It**
 
 
 ### ethereum/client-go
@@ -38,17 +38,6 @@ In terminal:
 ```
 cd nodo
 
-// create an account
-
-docker run --rm -it \
--v ${PWD}/data/keystore:/data \
-ethereum/client-go:v1.11.0 account new \
---keystore data
-
-// Set password: 1234 (for example)
-```
-
-```
 docker run --rm -it \
 -v ${PWD}/data:/data \
 -v ${PWD}/genesis.json:/genesis.json \
@@ -56,13 +45,27 @@ ethereum/client-go:v1.11.0 init --datadir data /genesis.json
 ```
 
 ```
-// Set your miner account (Could be the new account created before or one of your metamask to see the first results)
+// Set  your metamask to see the first results and if it works
 
-docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 --mine --miner.etherbase <<Your 0x Wallet Account >> --http.corsdomain="*" --miner.threads 1
+docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/client-go:v1.11.0 \
+--datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 \
+--mine --miner.etherbase <<Your 0x Wallet Account >> --http.corsdomain="*" --miner.threads 1
 ```
-This could take some minutes, refresh cache in metamask and you will see the balance of your miner account, or try to make some fake transaction to force Metamask to fetch the balance.
+```
+// create an account
 
+docker run --rm -it \
+-v ${PWD}/data/keystore:/data \
+ethereum/client-go:v1.11.0 account new \
+--keystore data
 
+// Set password: 1234 (if you prefer another, remember change it also in Back module)
+
+This could take some minutes, refresh cache in metamask and 
+you will see the balance of your miner account, 
+or try to make some fake transaction to force Metamask to fetch the balance.
+```
+**Set the NEW wallet direction in nodo/genesis.json and Save It**
 
 ### Back
 
