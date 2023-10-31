@@ -27,7 +27,7 @@ Run Docker Desktop
 
 Open your Metamask
 
-**Set the wallet direction in nodo/genesis.json and Save It**
+**Set YOUR wallet direction in nodo/genesis.json and Save It**
 
 
 ### ethereum/client-go
@@ -51,6 +51,9 @@ docker run -d -p 8545:8545 --name ethe-node-8888 -v ${PWD}/data:/data ethereum/c
 --datadir data --http --http.api persona,admin,eth,net,web3 --http.addr 0.0.0.0 --http.port 8545 \
 --mine --miner.etherbase <<Your 0x Wallet Account >> --http.corsdomain="*" --miner.threads 1
 ```
+
+**Reset web explorer and Metamask**
+
 ```
 // create an account
 
@@ -67,6 +70,10 @@ or try to make some fake transaction to force Metamask to fetch the balance.
 ```
 **Set the NEW wallet direction in nodo/genesis.json and Save It**
 
+The new account will be the Faucet miner
+
+Rename the file created (UTC--... for account.json) and take the new wallet address (add an 0x where you paste it (genesis and comand))
+
 ### Back
 
 ```
@@ -79,14 +86,6 @@ yarn add cors
 npx nodemon app.js
 ```
 
-// Now we go to Repeat the previous process first
-Before, 
-```
-cd ..
-cd nodo
-```
-and drop the container and data folder and take the address of the new account created and replace it in the same places as you set your previous account and go to the previous folder, rename the file created (UTC--... for account.json) and take the new wallet address (add an 0x where you paste it (genesis and comand))
-
 ```
 //new terminal 
 // direcion of the destiny of the funds from faucet account
@@ -98,6 +97,7 @@ curl localhost:3455/balance/<<Your 0x Wallet Account >>
 ```
 
 ### Front
+
 ```
 cd ..
 cd front
