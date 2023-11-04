@@ -64,7 +64,7 @@ ethereum/client-go:v1.11.0 account new \
 
 // Set password: 1234 (if you prefer another, remember change it also in Back module)
 
-This could take some minutes, refresh cache in metamask and 
+This could take some minutes, refresh cache in metamask or the entire explorer and 
 you will see the balance of your miner account, 
 or try to make some fake transaction to force Metamask to fetch the balance.
 ```
@@ -91,7 +91,7 @@ npx nodemon app.js
 // direcion of the destiny of the funds from faucet account
 curl localhost:3455/faucet/<<Your 0x Wallet Account >>
 
-//Remember to refresh the cache in metamask to see the balance of the new account, could take a minutes
+//Remember to refresh the cache in metamask or the entire explorer to see the balance of the new account, could take a minutes
 
 curl localhost:3455/balance/<<Your 0x Wallet Account >>
 ```
